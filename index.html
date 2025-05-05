@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Logger</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Activity Logger</h1>
+
+    <div class="input-container">
+      <input
+        type="text"
+        id="activity-input"
+        placeholder="Enter a log, e.g. 'sql', 'python'"
+      />
+      <button id="submit-btn">Log Activity</button>
+    </div>
+
+    <div class="categories">
+      <div class="category-pill active" data-category="all">All</div>
+      <div class="category-pill" data-category="sql">SQL</div>
+      <div class="category-pill" data-category="python">Python</div>
+      <div class="category-pill" data-category="javascript">JavaScript</div>
+      <div class="category-pill" data-category="dom">DOM</div>
+    </div>
+
+    <h2>Recent Entries:</h2>
+    <div id="recent-logs"></div>
+
+    <h2>Weekly Heatmap:</h2>
+    <div class="days-row">
+      <div class="day-label">Sun</div>
+      <div class="day-label">Mon</div>
+      <div class="day-label">Tue</div>
+      <div class="day-label">Wed</div>
+      <div class="day-label">Thu</div>
+      <div class="day-label">Fri</div>
+      <div class="day-label">Sat</div>
+    </div>
+    <div id="heatmap-container"></div>
+
+    <div class="activity-stats">
+      <div class="stat-card">
+        <h3>Total Logs</h3>
+        <div class="stat-value" id="total-logs">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>This Week</h3>
+        <div class="stat-value" id="week-logs">0</div>
+      </div>
+      <div class="stat-card">
+        <h3>Most Active Day</h3>
+        <div class="stat-value" id="active-day">-</div>
+      </div>
+      <div class="stat-card">
+        <h3>Top Category</h3>
+        <div class="stat-value" id="top-category">-</div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
